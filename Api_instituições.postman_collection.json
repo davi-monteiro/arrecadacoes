@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "bc5afca6-ef87-4193-a8aa-a485f9938134",
+		"name": "Api_instituições",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "instituições",
+			"item": [
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "J14E06S95U13S",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/instituicoes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"instituicoes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserir",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "J14E06S95U13S",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "Teste para excluir",
+									"type": "text"
+								},
+								{
+									"key": "resumo",
+									"value": "vou apagar",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "contato@apagar.com.br",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/instituicoes/insert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"instituicoes",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Token",
+								"type": "text",
+								"value": "J14E06S95U13S"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nome",
+									"value": "Insituicao do pulmão",
+									"type": "text"
+								},
+								{
+									"key": "resumo",
+									"value": "Arrecamamos doações para pessoas de baixa renda com problemas pulmonares.",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "contato@instpulmao.com.br",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/instituicoes/update/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"instituicoes",
+								"update",
+								"2"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Insituicao do pulmão 2",
+									"disabled": true
+								},
+								{
+									"key": "resumo",
+									"value": "Arrecamamos doações para pessoas de baixa renda com problemas pulmonares",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "contato@instpulmao.com.br",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Token",
+								"type": "text",
+								"value": "J14E06S95U13S"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/instituicoes/delete/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"instituicoes",
+								"delete",
+								"3"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Insituicao do pulmão 2",
+									"disabled": true
+								},
+								{
+									"key": "resumo",
+									"value": "Arrecamamos doações para pessoas de baixa renda com problemas pulmonares",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "contato@instpulmao.com.br",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
