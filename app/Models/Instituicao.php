@@ -22,4 +22,9 @@ class Instituicao extends Model
     {
         return $this->hasMany(Doacao::class, 'instituicao_id', 'id');
     }
+
+    public function favoritos()
+    {
+        return $this->hasMany(Favorito::class, 'instituicao_id', 'id');
+    }
 }

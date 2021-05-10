@@ -72,6 +72,11 @@ class SiteController extends Controller
         $user->senha = Hash::make($request->senha);
         $user->save();
 
-        return redirect()->back()->with(['classe' => 'success', 'msg' => 'Email cadastrado com sucesso']);
+        $credenciais = ['email' => $request->email, 'password' => $request->senha];
+        if (Auth::guard('usuario')->attempt($credenciais)) {
+            return redirect()->route('todas_insts')->with(['classe' => 'success', 'msg-cadastro' => 'Email cadastrado com sucesso']);
+        } else {
+            return redirect()->back()->with(['classe' => 'success', 'msg' => 'Email cadastrado com sucesso']);
+        }
     }
 }

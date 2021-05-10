@@ -114,6 +114,8 @@ class InstituicoesController extends Controller
                 $inst = Instituicao::find($id);
                 if ($inst) {
                     $array['data'] = $inst->id;
+                    $inst->doacoes()->delete();
+                    $inst->favoritos()->delete();
                     $inst->delete();
                 } else {
                     $array['return'] = 'Nada encontrado';

@@ -65,7 +65,7 @@
                         <button type="submit" class="btn btn-success w-100 font-weight-bold text-uppercase">Doar agora</button>
                         @else
                         <div class="alert alert-primary" role="alert">
-                            Para doar você precisa esta logado sistema <a href="{{route('login')}}" class="alert-link">Clique aqui</a> e doe agora mesmo.
+                            Para doar você precisa estar logado no sistema <a href="{{route('login')}}" class="alert-link">Clique aqui</a> e doe agora mesmo.
                         </div>
                         @endif
                     </form>

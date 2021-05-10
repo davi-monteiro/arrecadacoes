@@ -9,7 +9,7 @@
     </div>
     <div class="container py-5">
         <div class="row d-flex align-items-center">
-            <div class="col-6">
+            <div class="col-md-6">
                 <div class="border rounded p-4">
                     <h4 class="font-weight-bold text-center text-uppercase text-primary mb-4">
                         Fazer login
@@ -35,7 +35,7 @@
                     </form>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
                 <div class="border rounded p-4">
                     <h4 class="font-weight-bold text-center text-uppercase text-success mb-4">
                         Criar conta
@@ -51,13 +51,9 @@
                                 <label for="cadEmail">Email</label>
                                 <input name="email" type="email" class="form-control" value="{{ old('email') }}" id="cadEmail">
                             </div>
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-12">
                                 <label for="cadSenha">Senha</label>
                                 <input name="senha" type="password" class="form-control" name="{{ old('password') }}" id="cadSenha">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="cadConfSenha">Confirmar Senha</label>
-                                <input name="senha_confirmar" type="password" class="form-control" id="cadConfSenha">
                             </div>
                         </div>
                         @if(session('msg'))
